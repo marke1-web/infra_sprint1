@@ -1,5 +1,5 @@
 IP: 158.160.72.84;
-name_taski: marke3.hopto.org;
-name_kittygram: server324234.ddns.net;
+name_taski: https://marke3.hopto.org/;
+name_kittygram: https://server324234.ddns.net/;
 login: yc-user;
 password: 2312;
