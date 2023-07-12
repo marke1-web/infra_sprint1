@@ -21,11 +21,11 @@ server {
          try_files $uri /index.html;
      }
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/marke3.hopto.org/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/marke3.hopto.org/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl; 
+    ssl_certificate /etc/letsencrypt/live/marke3.hopto.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/marke3.hopto.org/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
 
 
@@ -33,13 +33,13 @@ server {
 server {
     if ($host = server324234.ddns.net) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
+    } 
 
 
 
      listen 80;
      server_name server324234.ddns.net;
-    return 404; # managed by Certbot
+    return 404;
 
 
 }
@@ -63,11 +63,11 @@ server {
     }
  
 
-    listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/marke3.hopto.org/fullchain.pem; # managed by Certbot
-    ssl_certificate_key /etc/letsencrypt/live/marke3.hopto.org/privkey.pem; # managed by Certbot
-    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/marke3.hopto.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/marke3.hopto.org/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; 
 
 }
 
@@ -75,13 +75,13 @@ server {
 server {
     if ($host = marke3.hopto.org) {
         return 301 https://$host$request_uri;
-    } # managed by Certbot
+    }
 
 
 
         server_name marke3.hopto.org;
     listen 80;
-    return 404; # managed by Certbot
+    return 404;
 
 
 }
